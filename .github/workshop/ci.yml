@@ -50,7 +50,7 @@ jobs:
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/admin'
+    if: github.ref == 'refs/heads/dev'
 
     steps:
       - name: Install SSH key
