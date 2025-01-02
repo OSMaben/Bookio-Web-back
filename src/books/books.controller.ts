@@ -4,8 +4,6 @@ import { BooksService } from './books.service';
 import { CreateBookDto } from './dto/create-book.dto';
 import { UpdateBookDto } from './dto/update-book.dto';
 import multer from 'multer';
-import { AdminGuard } from '../guards/IsAdmin';
-import { CognitoAuthGuard } from 'src/guards/CognitoAuthGuard';
 
 @Controller('books')
 export class BooksController {
@@ -54,6 +52,4 @@ export class BooksController {
   returnBook(@Param('id') id: string) {
     return this.booksService.returnBook(id);
   }
-
-  
 }
