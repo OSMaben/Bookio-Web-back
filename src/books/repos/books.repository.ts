@@ -18,7 +18,7 @@ export class BooksRepository{
             region: process.env.AWS_REGION || 'us-east-1',
             credentials: {
                 accessKeyId: process.env.AWS_ACCESS_KEY_ID || 'yAKIAR3HUOSZU5VRZVXEM',
-                secretAccessKey: process.env.AWS_SECRET_KEY || 'mDb2Bdt+UF+bl8Lno6qrmHbXe3yOmtT3dAeDcI2K'
+                secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || 'mDb2Bdt+UF+bl8Lno6qrmHbXe3yOmtT3dAeDcI2K'
             }
         });
         this.dynamoDb = DynamoDBDocumentClient.from(client);   
